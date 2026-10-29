@@ -1,9 +1,6 @@
 # Week 4 — Extra Practice Projects
 
-Optional. Beyond the lab — classic beginner projects, adapted from Angela
-Yu's *100 Days of Code*, trimmed to use this week's new tools: lists,
-dicts, `.get()`, and looping over both. Combine freely with Week 2's
-loops and Week 3's functions and `random` module.
+
 
 ---
 
