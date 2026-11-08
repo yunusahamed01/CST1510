@@ -1,0 +1,6 @@
+label,value,limit,percent,status
+Apple,10,20,50.0,OK
+Banana,15,25,60.0,OK
+Orange,12,30,40.0,OK
+Mango,18,35,51.42857142857142,OK
+Grapes,8,15,53.333333333333336,OK
