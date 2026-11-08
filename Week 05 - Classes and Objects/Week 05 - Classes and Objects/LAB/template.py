@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  :Yunus Ahamed Shaik
+Lane  :  AI 
+Date  :01/11/2026
 
 Run it:   python template.py
 
@@ -24,6 +24,19 @@ Delete these instructions as you replace them with your code.
 #                see the note below.
 
 # your class goes here
+class Record:
+    def __init__(self, label, value, limit,):
+        self.label = label
+        self.value = value
+        self.limit = limit
+    def status(self):
+        percent = (self.value/self.limit)*100
+        if percent >= 100:
+            return"OVER LIMIT"
+        elif percent >= 90:
+            return"Warning"
+        else:
+            return "OK"
 
 
 # ==================================================================== RECORDS
@@ -35,11 +48,21 @@ Delete these instructions as you replace them with your code.
 #                lines from a file and returns a list of Record objects. Make
 #                your own data file, one record per line.
 
-records = []   # replace with your code
-
+records = [
+    Record("srv-01",120,100),
+    Record("srv-02",98,100),
+    Record("srv-03",60,100)
+]   # replace with your code
+for record in records:
+    print(record.status())
 
 # ==================================================================== OUTPUT
 # 3. Print a report for each record.
+print(f"label : {record.label}")
+print(f"value: {record.value}")
+print(f"limit:{record.limit}")
+print(f"  Status : {record.status()}")
+
 #
 #    Threshold : label, value, limit, inside a border.
 #    Typical   : add the result of .status().
@@ -55,7 +78,10 @@ for record in records:
     print(f"  RECORD CHECK  -  {record.label}")
     print("=" * 34)
 
-    # your report lines go here
+    print(f"label : {record.label}")
+    print(f"value: {record.value}")
+    print(f"limit:{record.limit}")
+    print(f"  Status : {record.status()}")# your report lines go here
 
     print("=" * 34)
 

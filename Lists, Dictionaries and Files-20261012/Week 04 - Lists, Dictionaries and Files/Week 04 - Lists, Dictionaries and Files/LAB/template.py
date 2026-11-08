@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  :YUNUS AHAMED SHAIK
+Lane  :  AI 
+Date  :01/11/2026
 
 Run it:   python template.py
 
@@ -20,6 +20,31 @@ Delete these instructions as you replace them with your code.
 #    one-line docstring.
 
 # your function(s) go here
+def check_record(value, limit):
+    """Calculates the difference, percentage, and status based on value and limit."""
+    difference = value - limit
+    percent = (value / limit) * 100
+    if percent >= 100:
+        status = "OVER LIMIT"
+    elif percent >= 90:
+        status = "WARNING"
+    else:
+        status = "OK"
+    return difference, percent, status
+
+def print_record(label, value, limit, difference, percent, status):
+    """Prints the report based on the provided values."""
+    print()
+    print("=" * 34)
+    print(f"  RECORD CHECK  -  {label}")
+    print("=" * 34)
+    print(f"label: {label}")
+    print(f"value: {value:.2f}")
+    print(f"limit: {limit:.2f}")
+    print(f"difference: {difference:.2f}")
+    print(f"percent: {percent:.2f}%")
+    print(f"status: {status}")
+    print("=" * 34)
 
 
 # ====================================================================== STORE
@@ -33,7 +58,11 @@ Delete these instructions as you replace them with your code.
 #    Excellent : also write the results out to a new file (one line per
 #                record: label, status), as well as printing them.
 
-records = []   # replace with your code
+records = [
+    {"label": "Record 1", "value": 120.0, "limit": 100.0},
+    {"label": "Record 2", "value": 85.0, "limit": 100.0},
+    {"label": "Record 3", "value": 95.0, "limit": 100.0}
+]   # replace with your code
 
 
 # =============================================================== PROCESS + OUTPUT
@@ -43,7 +72,13 @@ records = []   # replace with your code
 #                print that once, after the loop ends.
 
 # your loop goes here
-
+for record in records:
+    label = record["label"]
+    value = record["value"]
+    limit = record["limit"]
+    
+    difference, percent, status = check_record(value, limit)
+    print_record(label, value, limit, difference, percent, status)
 
 # ==========================================================================
 # 4. Before you finish:
