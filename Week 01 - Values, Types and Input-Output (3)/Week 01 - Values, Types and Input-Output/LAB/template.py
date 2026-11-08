@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  :Yunus Ahamed shaik
+Lane  :  AI 
+Date  :01/11/2026
 
 Run it:   python template.py
 
@@ -21,9 +21,9 @@ Delete these instructions as you replace them with your code.
 #
 #    Remember: input() always gives back text.
 
-label = ""      # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
+label = input("Enter your name: ")     # : replace with an input() call
+first = float(input("Enter the first number: "))     # : replace with an input() call, converted
+second = float(input("Enter the second number: "))    # : replace with an input() call, converted
 
 
 # ================================================================== PROCESS
@@ -34,8 +34,8 @@ second = 0.0    # : replace with an input() call, converted
 #
 #    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
+difference = first - second  # 
+percent = (first / second) * 100    # 
 
 
 # =================================================================== OUTPUT
@@ -47,13 +47,23 @@ percent = 0.0      #
 #
 #    Useful:   f"{value:>10.2f}"    right-aligned, 2 decimal places
 #              f"{value:>+10.2f}"   the same, but always shows the sign
-
+print(f"Name: {label}")
+print(f"First Number: {first:>10.2f}")
+print(f"Second Number: {second:>10.2f}")
+print(f"Difference: {difference:>+10.2f}")
+print(f"Percent: {percent:>10.2f}")
 print()
 print("=" * 34)
 print(f"  RECORD CHECK  -  {label}")
 print("=" * 34)
 
 # : your report lines go here
+
+print(f"First Number: {first:>10.2f}")
+print(f"Second Number: {second:>10.2f}")
+print(f"Difference: {difference:>+10.2f}")
+print(f"Percent: {percent:>10.2f}")
+print(f"my comments: values checked successfull")
 
 print("=" * 34)
 
